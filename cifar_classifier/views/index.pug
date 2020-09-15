@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+script.
+  function loadFile(event) {
+    var image = document.getElementById('photo');
+    image.src = URL.createObjectURL(event.target.files[0]);
+  };
+<title>Upload Images</title>
+<meta charset="utf-8">
+</head>
+<body>
+
+<h1>Upload Image To Get Prediction</h1>
+<label>Recognize: airplane automobile bird cat deer dog frog horse ship truck<label>
+<br><br>
+<form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" onchange="loadFile(event)" accept="image/*" name="photo" >
+        <input type="submit" value="upload">
+        <br><br><br><img style="max-width:20%" id="photo">
+</form>
+            
+
+</body>
+</html>
